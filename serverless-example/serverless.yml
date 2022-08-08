@@ -16,11 +16,7 @@ package:
     - ./bin/**
 
 functions:
-<<<<<<< HEAD
   graphqlServer:
-=======
-  hello:
->>>>>>> aa51866445a23fd8d6f8a8050bb8133413b9eb97
     handler: bin/graphqlServer
     events:
       - http:
