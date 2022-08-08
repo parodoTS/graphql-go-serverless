@@ -17,7 +17,7 @@ package:
 
 functions:
   hello:
-    handler: bin/hello
+    handler: bin/graphqlServer
     events:
       - http:
           path: "{proxy+}"
