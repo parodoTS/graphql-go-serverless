@@ -1,0 +1,27 @@
+
+
+service: serverless-example
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: us-west-2
+
+
+package:
+  patterns:
+    - '!./**'
+    - ./bin/**
+
+functions:
+  hello:
+    handler: bin/hello
+    events:
+      - http:
+          path: "{proxy+}"
+          method: any
+          cors: true
+
+
